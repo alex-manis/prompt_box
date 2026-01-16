@@ -102,7 +102,7 @@ class ErrorHandler {
    * Send error to external error tracking service
    * TODO: Integrate with Sentry, LogRocket, or similar
    */
-  private sendToErrorService(loggedError: LoggedError): void {
+  private sendToErrorService(_loggedError: LoggedError): void {
     // Example integration:
     // if (window.Sentry) {
     //   window.Sentry.captureException(loggedError.error, {

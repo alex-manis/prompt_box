@@ -1,5 +1,5 @@
 import type { Prompt } from '../domain/prompt';
-import { handleImportExportError, ErrorSeverity } from './errorHandler';
+import { handleImportExportError } from './errorHandler';
 
 export interface ExportData {
   version: string;

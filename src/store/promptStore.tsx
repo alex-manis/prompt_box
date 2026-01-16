@@ -4,7 +4,7 @@ import type { Prompt, PromptFormData } from '../domain/prompt';
 import { promptReducer, type PromptState } from './promptReducer';
 import { loadPrompts, savePrompts } from '../utils/storage';
 import type { PromptAction } from './promptReducer';
-import { handleStorageError, ErrorSeverity, ErrorCategory } from '../utils/errorHandler';
+import { handleStorageError } from '../utils/errorHandler';
 
 interface PromptContextValue {
   state: PromptState;

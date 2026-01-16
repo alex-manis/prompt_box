@@ -36,7 +36,7 @@ export function applyVariables(
   let result = template;
   const variablePattern = /\{([^}]+)\}/g;
 
-  result = result.replace(variablePattern, (match, variableName) => {
+  result = result.replace(variablePattern, (_match, variableName) => {
     const key = variableName.trim();
     const value = values[key] ?? '';
     return value;
