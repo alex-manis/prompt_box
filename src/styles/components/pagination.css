@@ -1,0 +1,99 @@
+.pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+}
+
+@media (min-width: 640px) {
+  .pagination {
+    flex-direction: row;
+  }
+}
+
+.pagination__info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.pagination__select {
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.pagination__select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.pagination__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.pagination__button {
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  font-size: 0.875rem;
+  transition: background-color var(--transition-base), border-color var(--transition-base);
+  cursor: pointer;
+}
+
+.pagination__button:hover:not(:disabled) {
+  background-color: var(--color-bg-hover);
+}
+
+.pagination__button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination__pages {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.pagination__page-button {
+  min-width: 2.5rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  font-size: 0.875rem;
+  transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base);
+  cursor: pointer;
+}
+
+.pagination__page-button:hover:not(.pagination__page-button--disabled) {
+  background-color: var(--color-bg-hover);
+}
+
+.pagination__page-button--active {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.pagination__page-button--disabled {
+  border-color: transparent;
+  color: var(--color-text-muted);
+  cursor: default;
+}
